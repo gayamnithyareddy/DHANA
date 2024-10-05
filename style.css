@@ -1,0 +1,64 @@
+body {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+#animated-name {
+  perspective: 1000px;
+}
+
+#animated-name h1 {
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  color: #ff3e96;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  animation: rotate 10s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotateX(0) rotateY(0);
+  }
+  25% {
+      transform: rotateX(20deg) rotateY(30deg);
+  }
+  50% {
+      transform: rotateX(50deg) rotateY(-40deg);
+  }
+  75% {
+      transform: rotateX(-30deg) rotateY(60deg);
+  }
+  100% {
+      transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #00ffdd; /* Existing border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), /* Existing shadow */
+              0 0 20px rgba(255, 215, 0, 0.8), /* Gold glow */
+              0 0 30px rgba(255, 215, 0, 0.8); /* Stronger gold glow */
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; /* Add position relative for the pseudo-element */
+}
+.section-heading {
+  color: white;
+  text-shadow: 2px 2px 5px orange, /* Existing orange shadow */
+               0 0 20px orange,     /* Additional glow effect */
+               0 0 30px orange;     /* More glow effect */
+  animation: moveHeading 2s infinite alternate;
+}
